@@ -90,7 +90,7 @@ Velvet Brew Café was developed as a front-end web development project to demons
 ## ▶️ How to Run
 ### Clone the repository
 ```bash
-git clone https://github.com/your-username/velvet-brew.git
+git clone https://github.com/jangilisandhya/velvet-brew.git
 cd velvet-brew
 ```
 ### Run the Project
