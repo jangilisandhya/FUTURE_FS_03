@@ -1,0 +1,1299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BrewHaven Café - Premium specialty coffee, artisan pastries, and a cozy atmosphere. Experience world-class coffee culture.">
+    <meta name="keywords" content="café, coffee, specialty coffee, artisan, pastries, premium coffee shop">
+    <meta name="author" content="BrewHaven Café">
+    <meta property="og:title" content="BrewHaven Café - Premium Coffee Experience">
+    <meta property="og:description" content="Discover the finest specialty coffee and pastries at BrewHaven Café">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1511920170033-f8396924c348?w=1200&h=630&fit=crop">
+    <meta property="og:type" content="business.business">
+    <title>Velvet Brew Café - Premium Coffee & Pastries</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    <!-- Floating Theme Toggle -->
+    <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark/light mode">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/919876543210?text=Hi%20BrewHaven%20Café!%20I%20would%20like%20to%20know%20more." 
+       class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+<!-- Shopping Cart Icon -->
+    <button class="cart-button" id="cartButton">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-count" id="cartCount">0</span>
+    </button>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <button class="close-cart" id="closeCart">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <p class="empty-cart">Your cart is empty</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">₹0</span>
+            </div>
+            <button class="btn btn-primary" id="checkoutBtn">Proceed to Checkout</button>
+        </div>
+    </div>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <span>☕VELVET BREW</span>
+                </div>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#menu" class="nav-link">Menu</a></li>
+                    <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                    <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+                    <li><a href="#booking" class="nav-link">Book Now</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main">
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-background">
+                <div class="hero-gradient-1"></div>
+                <div class="hero-gradient-2"></div>
+            </div>
+            <div class="container hero-content">
+                <div class="hero-text" data-aos="fade-up">
+                    <h1 class="hero-title">
+                        Experience the Art of <span class="gradient-text">Fine Coffee</span>
+                    </h1>
+                    <p class="hero-subtitle">Handcrafted specialty coffee, fresh pastries, and exceptional hospitality in every visit.</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary" onclick="document.getElementById('booking').scrollIntoView({behavior: 'smooth'})">
+                            Book a Table
+                        </button>
+                        <button class="btn btn-secondary" onclick="document.getElementById('menu').scrollIntoView({behavior: 'smooth'})">
+                            View Menu
+                        </button>
+                    </div>
+                </div>
+                <div class="hero-image" data-aos="fade-left">
+                    <div class="image-placeholder">
+                        <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?w=500&h=600&fit=crop" alt="Premium coffee at BrewHaven Café">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 class="section-title">About Velvet Brew </h2>
+                    <p class="section-subtitle">Brewing unforgettable moments with artisan coffee and handcrafted delights.</p>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-content" data-aos="fade-right">
+                        <h3>Our Story</h3>
+                        <p>At Velvet Brew Café, we believe coffee is more than a beverage—it's an experience.
+        Every cup is crafted using carefully selected premium beans, expertly brewed to
+        deliver rich flavors and unforgettable moments.</p>
+                        <p> From handcrafted specialty coffees and freshly baked pastries to a warm and inviting
+        atmosphere, our café is designed to bring people together. Whether you're catching
+        up with friends, working remotely, or enjoying a quiet moment, Velvet Brew offers
+        the perfect blend of comfort, quality, and hospitality.</p>
+                        <div class="about-features">
+                            <div class="feature-item">
+                                <i class="fas fa-leaf"></i>
+                                <span>100% Ethically Sourced</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-fire"></i>
+                                <span>In-House Roasting</span>
+                            </div>
+                            <div class="feature-item">
+    <i class="fas fa-coffee"></i>
+    <span>Premium Coffee Beans</span>
+</div>
+
+                            <div class="feature-item">
+                                <i class="fas fa-award"></i>
+                                <span>Award-Winning Baristas</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-stats" data-aos="fade-left">
+                        <div class="stat-card glassmorphism">
+                            <h4 class="stat-number">10k+</h4>
+                            <p class="stat-label">Happy Customers</p>
+                        </div>
+                        <div class="stat-card glassmorphism">
+                            <h4 class="stat-number">75+</h4>
+                            <p class="stat-label">Menu Delights</p>
+                        </div>
+                        <div class="stat-card glassmorphism">
+                            <h4 class="stat-number">100%</h4>
+                            <p class="stat-label">Premium of Ingredients</p>
+                        </div>
+                        <div class="stat-card glassmorphism">
+                            <h4 class="stat-number">4.9★</h4>
+                            <p class="stat-label">Customer Rating</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section class="why-choose">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 class="section-title">Why Choose Velvet Brew?</h2>
+                    <p class="section-subtitle"> Experience the perfect blend of premium coffee, artisan craftsmanship, and genuine hospitality</p>
+                </div>
+
+                <div class="benefits-grid">
+                    <div class="benefit-card glassmorphism" data-aos="fade-up" data-aos-delay="100">
+                        <div class="benefit-icon">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <h3>Premium Quality</h3>
+                        <p>Only the finest single-origin beans, carefully selected and roasted to perfection</p>
+                    </div>
+
+                    <div class="benefit-card glassmorphism" data-aos="fade-up" data-aos-delay="200">
+                        <div class="benefit-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Expert Baristas</h3>
+                        <p>Highly trained professionals with years of experience in coffee culture</p>
+                    </div>
+
+                    <div class="benefit-card glassmorphism" data-aos="fade-up" data-aos-delay="300">
+                        <div class="benefit-icon">
+                            <i class="fas fa-spa"></i>
+                        </div>
+                        <h3>Cozy Ambiance</h3>
+                        <p>Thoughtfully designed space perfect for work, meetings, or relaxation</p>
+                    </div>
+
+                    <div class="benefit-card glassmorphism" data-aos="fade-up" data-aos-delay="400">
+                        <div class="benefit-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h3>Sustainable Practices</h3>
+                        <p>Eco-friendly approach with compostable cups and waste reduction programs</p>
+                    </div>
+
+                    <div class="benefit-card glassmorphism" data-aos="fade-up" data-aos-delay="500">
+                        <div class="benefit-icon">
+                            <i class="fas fa-wifi"></i>
+                        </div>
+                        <h3>Free High-Speed WiFi</h3>
+                        <p>Perfect for remote work with comfortable seating and excellent connectivity</p>
+                    </div>
+                    <div class="benefit-card glassmorphism" data-aos="fade-up" data-aos-delay="700">
+    <div class="benefit-icon">
+        <i class="fas fa-coffee"></i>
+    </div>
+    <h3>Artisan Coffee</h3>
+    <p>Handcrafted beverages prepared with precision, passion, and premium ingredients.</p>
+</div>
+
+<div class="benefit-card glassmorphism" data-aos="fade-up" data-aos-delay="800">
+    <div class="benefit-icon">
+        <i class="fas fa-bread-slice"></i>
+    </div>
+    <h3>Freshly Baked Daily</h3>
+    <p>Enjoy a selection of pastries, cakes, and bakery delights made fresh every day.</p>
+</div>
+<div class="benefit-card glassmorphism" data-aos="fade-up" data-aos-delay="1200">
+    <div class="benefit-icon">
+        <i class="fas fa-mug-hot"></i>
+    </div>
+    <h3>Signature House Blends</h3>
+    <p>Exclusive coffee blends crafted to deliver a unique and unforgettable taste.</p>
+</div>
+
+                    <div class="benefit-card glassmorphism" data-aos="fade-up" data-aos-delay="600">
+                        <div class="benefit-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3>Community Focused</h3>
+                        <p>Regular events, workshops, and a space where connections are made</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+<!-- Menu/Services Section -->
+<section id="menu" class="menu">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <h2 class="section-title">Our Menu</h2>
+            <p class="section-subtitle">Carefully curated selections for every palate</p>
+        </div>
+
+        <div class="menu-tabs">
+            <button class="menu-tab-btn active" data-category="coffee">
+                <i class="fas fa-mug-hot"></i> Coffee
+            </button>
+            <button class="menu-tab-btn" data-category="pastries">
+                <i class="fas fa-cookie"></i> Pastries
+            </button>
+            <button class="menu-tab-btn" data-category="beverages">
+                <i class="fas fa-glass-water"></i> Beverages
+            </button>
+            <button class="menu-tab-btn" data-category="food">
+                <i class="fas fa-utensils"></i> Food
+            </button>
+        </div>
+
+        <!-- ============ COFFEE ============ -->
+        <div class="menu-item-group active" data-category="coffee">
+            <div class="menu-list">
+
+                <div class="menu-card">
+                    <img src="images/signature-espresso.jpg" alt="Signature Espresso">
+                    <div class="menu-content">
+                        <h3>Signature Espresso</h3>
+                        <span class="menu-tag"><i class="fas fa-award"></i> Best Seller</span>
+                        <p>Single/Double shots of our signature blend, bold and intense</p>
+                    </div>
+                    <div class="menu-action">
+                        <h4>₹150</h4>
+                        <div class="quantity-box">
+                            <button>-</button><span>1</span><button>+</button>
+                        </div>
+                        <button class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-card">
+                    <img src="images/cappuccino.jpg" alt="Cappuccino">
+                    <div class="menu-content">
+                        <h3>Cappuccino</h3>
+                        <span class="menu-tag"><i class="fas fa-star"></i> Classic Favorite</span>
+                        <p>Perfect balance of espresso, steamed milk and creamy foam</p>
+                    </div>
+                    <div class="menu-action">
+                        <h4>₹200</h4>
+                        <div class="quantity-box">
+                            <button>-</button><span>1</span><button>+</button>
+                        </div>
+                        <button class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-card">
+                    <img src="images/cafe-latte.jpg" alt="Cafe Latte">
+                    <div class="menu-content">
+                        <h3>Café Latte</h3>
+                        <span class="menu-tag"><i class="fas fa-leaf"></i> Smooth & Creamy</span>
+                        <p>Smooth espresso with velvety steamed milk and light foam</p>
+                    </div>
+                    <div class="menu-action">
+                        <h4>₹220</h4>
+                        <div class="quantity-box">
+                            <button>-</button><span>1</span><button>+</button>
+                        </div>
+                        <button class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-card">
+                    <img src="images/mocha.jpg" alt="Mocha">
+                    <div class="menu-content">
+                        <h3>Mocha</h3>
+                        <span class="menu-tag"><i class="fas fa-mug-hot"></i> Chocolate Delight</span>
+                        <p>Espresso mixed with rich chocolate syrup and topped with creamy steamed milk</p>
+                    </div>
+                    <div class="menu-action">
+                        <h4>₹260</h4>
+                        <div class="quantity-box">
+                            <button>-</button><span>1</span><button>+</button>
+                        </div>
+                        <button class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-card">
+                    <img src="images/flat-white.jpg" alt="Flat White">
+                    <div class="menu-content">
+                        <h3>Flat White</h3>
+                        <span class="menu-tag"><i class="fas fa-coffee"></i> Rich & Velvety</span>
+                        <p>Double espresso blended with silky steamed milk for a smooth and balanced taste</p>
+                    </div>
+                    <div class="menu-action">
+                        <h4>₹240</h4>
+                        <div class="quantity-box">
+                            <button>-</button><span>1</span><button>+</button>
+                        </div>
+                        <button class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-card">
+                    <img src="images/caramel-macchiato.jpg" alt="Caramel Macchiato">
+                    <div class="menu-content">
+                        <h3>Caramel Macchiato</h3>
+                        <span class="menu-tag"><i class="fas fa-star"></i> Sweet Favorite</span>
+                        <p>Espresso layered with steamed milk and finished with rich caramel drizzle</p>
+                    </div>
+                    <div class="menu-action">
+                        <h4>₹280</h4>
+                        <div class="quantity-box">
+                            <button>-</button><span>1</span><button>+</button>
+                        </div>
+                        <button class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-card">
+                    <img src="images/affogato.jpg" alt="Affogato">
+                    <div class="menu-content">
+                        <h3>Affogato</h3>
+                        <span class="menu-tag"><i class="fas fa-ice-cream"></i> Dessert Coffee</span>
+                        <p>A scoop of vanilla ice cream topped with a shot of hot espresso</p>
+                    </div>
+                    <div class="menu-action">
+                        <h4>₹300</h4>
+                        <div class="quantity-box">
+                            <button>-</button><span>1</span><button>+</button>
+                        </div>
+                        <button class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- ============ END COFFEE ============ -->
+
+        <!-- ============ PASTRIES ============ -->
+        <div class="menu-item-group" data-category="pastries">
+            <div class="menu-list">
+
+                <div class="menu-card">
+                    <img src="images/croissant.jpg" alt="Croissant">
+                    <div class="menu-content">
+                        <h3>Butter Croissant</h3>
+                        <span class="menu-tag"><i class="fas fa-cookie"></i> Freshly Baked</span>
+                        <p>Flaky, buttery French pastry baked fresh daily.</p>
+                    </div>
+                    <div class="menu-action">
+                        <h4>₹180</h4>
+                        <div class="quantity-box">
+                            <button>-</button><span>1</span><button>+</button>
+                        </div>
+                        <button class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-card">
+                    <img src="images/red-velvet-cake.jpg" alt="Red Velvet Cake">
+                    <div class="menu-content">
+                        <h3>Red Velvet Cake</h3>
+                        <span class="menu-tag"><i class="fas fa-cake-candles"></i> Premium Dessert</span>
+                        <p>Soft red velvet sponge layered with cream cheese frosting.</p>
+                    </div>
+                    <div class="menu-action">
+                        <h4>₹280</h4>
+                        <div class="quantity-box">
+                            <button>-</button><span>1</span><button>+</button>
+                        </div>
+                        <button class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-card">
+                    <img src="images/cinnamon-roll.jpg" alt="Cinnamon Roll">
+                    <div class="menu-content">
+                        <h3>Cinnamon Roll</h3>
+                        <span class="menu-tag"><i class="fas fa-fire"></i> Warm Favorite</span>
+                        <p>Soft baked roll swirled with cinnamon and sweet glaze.</p>
+                    </div>
+                    <div class="menu-action">
+                        <h4>₹170</h4>
+                        <div class="quantity-box">
+                            <button>-</button><span>1</span><button>+</button>
+                        </div>
+                        <button class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-card">
+                    <img src="images/donut.jpg" alt="Donut">
+                    <div class="menu-content">
+                        <h3>Chocolate Donut</h3>
+                        <span class="menu-tag"><i class="fas fa-star"></i> Customer Choice</span>
+                        <p>Soft donut topped with rich chocolate glaze.</p>
+                    </div>
+                    <div class="menu-action">
+                        <h4>₹120</h4>
+                        <div class="quantity-box">
+                            <button>-</button><span>1</span><button>+</button>
+                        </div>
+                        <button class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-card">
+                    <img src="images/apple-pie.jpg" alt="Apple Pie">
+                    <div class="menu-content">
+                        <h3>Apple Pie</h3>
+                        <span class="menu-tag"><i class="fas fa-apple-alt"></i> Homemade</span>
+                        <p>Classic apple pie filled with cinnamon-spiced apples.</p>
+                    </div>
+                    <div class="menu-action">
+                        <h4>₹220</h4>
+                        <div class="quantity-box">
+                            <button>-</button><span>1</span><button>+</button>
+                        </div>
+                        <button class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-card">
+                    <img src="images/cookies.jpg" alt="Chocolate Chip Cookies">
+                    <div class="menu-content">
+                        <h3>Chocolate Chip Cookies</h3>
+                        <span class="menu-tag"><i class="fas fa-cookie-bite"></i> Freshly Baked</span>
+                        <p>Crispy on the outside, soft on the inside, loaded with rich chocolate chips.</p>
+                    </div>
+                    <div class="menu-action">
+                        <h4>₹140</h4>
+                        <div class="quantity-box">
+                            <button>-</button><span>1</span><button>+</button>
+                        </div>
+                        <button class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-card">
+                    <img src="images/vanilla-cupcake.jpg" alt="Vanilla Cupcake">
+                    <div class="menu-content">
+                        <h3>Vanilla Cupcake</h3>
+                        <span class="menu-tag"><i class="fas fa-birthday-cake"></i> Sweet & Fluffy</span>
+                        <p>Soft vanilla sponge topped with creamy vanilla frosting and colorful sprinkles.</p>
+                    </div>
+                    <div class="menu-action">
+                        <h4>₹160</h4>
+                        <div class="quantity-box">
+                            <button>-</button><span>1</span><button>+</button>
+                        </div>
+                        <button class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-card">
+                    <img src="images/brownie.jpg" alt="Brownie">
+                    <div class="menu-content">
+                        <h3>Chocolate Brownie</h3>
+                        <span class="menu-tag"><i class="fas fa-heart"></i> Rich & Fudgy</span>
+                        <p>Dense chocolate brownie with a gooey center.</p>
+                    </div>
+                    <div class="menu-action">
+                        <h4>₹190</h4>
+                        <div class="quantity-box">
+                            <button>-</button><span>1</span><button>+</button>
+                        </div>
+                        <button class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-card">
+                    <img src="images/chocolate-muffin.jpg" alt="Chocolate Muffin">
+                    <div class="menu-content">
+                        <h3>Chocolate Muffin</h3>
+                        <span class="menu-tag"><i class="fas fa-heart"></i> Chocolate Lover's Choice</span>
+                        <p>Moist chocolate muffin packed with rich cocoa and delicious chocolate chips.</p>
+                    </div>
+                    <div class="menu-action">
+                        <h4>₹150</h4>
+                        <div class="quantity-box">
+                            <button>-</button><span>1</span><button>+</button>
+                        </div>
+                        <button class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-card">
+                    <img src="images/blueberry-cheesecake.jpg" alt="Blueberry Cheesecake">
+                    <div class="menu-content">
+                        <h3>Blueberry Cheesecake</h3>
+                        <span class="menu-tag"><i class="fas fa-cake-candles"></i> Creamy & Fruity</span>
+                        <p>Rich and creamy cheesecake topped with fresh blueberries and sweet blueberry sauce.</p>
+                    </div>
+                    <div class="menu-action">
+                        <h4>₹250</h4>
+                        <div class="quantity-box">
+                            <button>-</button><span>1</span><button>+</button>
+                        </div>
+                        <button class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- ============ END PASTRIES ============ -->
+
+        <!-- ============ BEVERAGES ============ -->
+        <div class="menu-item-group" data-category="beverages">
+            <div class="menu-list">
+
+                <div class="menu-card">
+                    <img src="images/iced-coffee.jpg" alt="Iced Coffee">
+                    <div class="menu-content">
+                        <h3>Iced Coffee</h3>
+                        <span class="menu-tag"><i class="fas fa-snowflake"></i> Refreshing</span>
+                        <p>Cold brew concentrate mixed with ice, milk, and a touch of sugar</p>
+                    </div>
+                    <div class="menu-action">
+                        <h4>₹180</h4>
+                        <div class="quantity-box">
+                            <button>-</button><span>1</span><button>+</button>
+                        </div>
+                        <button class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-card">
+                    <img src="images/icedd-latte.jpg" alt="Iced Latte">
+                    <div class="menu-content">
+                        <h3>Iced Latte</h3>
+                        <span class="menu-tag"><i class="fas fa-ice-cream"></i> Cool & Creamy</span>
+                        <p>Chilled espresso combined with cold milk and ice. Perfect for hot days with smooth, creamy taste</p>
+                    </div>
+                    <div class="menu-action">
+                        <h4>₹200</h4>
+                        <div class="quantity-box">
+                            <button>-</button><span>1</span><button>+</button>
+                        </div>
+                        <button class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-card">
+                    <img src="images/matcha-latte.jpg" alt="Matcha Latte">
+                    <div class="menu-content">
+                        <h3>Matcha Latte</h3>
+                        <span class="menu-tag"><i class="fas fa-leaf"></i> Healthy & Energizing</span>
+                        <p>Premium Japanese green tea powder whisked with steamed milk. Rich in antioxidants and naturally energizing</p>
+                    </div>
+                    <div class="menu-action">
+                        <h4>₹220</h4>
+                        <div class="quantity-box">
+                            <button>-</button><span>1</span><button>+</button>
+                        </div>
+                        <button class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-card">
+                    <img src="images/hot-chocolate.jpg" alt="Hot Chocolate">
+                    <div class="menu-content">
+                        <h3>Hot Chocolate</h3>
+                        <span class="menu-tag"><i class="fas fa-mug-hot"></i> Comfort Drink</span>
+                        <p>Rich and creamy hot chocolate made with premium cocoa powder, steamed milk, and topped with whipped cream</p>
+                    </div>
+                    <div class="menu-action">
+                        <h4>₹190</h4>
+                        <div class="quantity-box">
+                            <button>-</button><span>1</span><button>+</button>
+                        </div>
+                        <button class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-card">
+                    <img src="images/chai-latte.jpg" alt="Chai Latte">
+                    <div class="menu-content">
+                        <h3>Chai Latte</h3>
+                        <span class="menu-tag"><i class="fas fa-fire"></i> Warm & Spicy</span>
+                        <p>Traditional Indian spiced tea with cardamom, cinnamon, and ginger mixed with steamed milk and honey</p>
+                    </div>
+                    <div class="menu-action">
+                        <h4>₹160</h4>
+                        <div class="quantity-box">
+                            <button>-</button><span>1</span><button>+</button>
+                        </div>
+                        <button class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-card">
+                    <img src="images/fresh-juice.jpg" alt="Fresh Juice">
+                    <div class="menu-content">
+                        <h3>Fresh Juice</h3>
+                        <span class="menu-tag"><i class="fas fa-apple-alt"></i> Natural & Fresh</span>
+                        <p>Freshly squeezed juices made daily. Choose from orange, apple, carrot, or mixed fruit combination</p>
+                    </div>
+                    <div class="menu-action">
+                        <h4>₹150</h4>
+                        <div class="quantity-box">
+                            <button>-</button><span>1</span><button>+</button>
+                        </div>
+                        <button class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-card">
+                    <img src="images/smoothie-bowl.jpg" alt="Smoothie Bowl">
+                    <div class="menu-content">
+                        <h3>Smoothie Bowl</h3>
+                        <span class="menu-tag"><i class="fas fa-apple-alt"></i> Fruity & Thick</span>
+                        <p>Thick blended smoothie base topped with granola, fresh berries, coconut flakes, and honey drizzle</p>
+                    </div>
+                    <div class="menu-action">
+                        <h4>₹250</h4>
+                        <div class="quantity-box">
+                            <button>-</button><span>1</span><button>+</button>
+                        </div>
+                        <button class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-card">
+                    <img src="images/mango-lassi.jpg" alt="Mango Lassi">
+                    <div class="menu-content">
+                        <h3>Mango Lassi</h3>
+                        <span class="menu-tag"><i class="fas fa-glass-water"></i> Tropical & Creamy</span>
+                        <p>Traditional Indian yogurt-based drink with fresh mango pulp, a hint of cardamom, and chilled to perfection</p>
+                    </div>
+                    <div class="menu-action">
+                        <h4>₹170</h4>
+                        <div class="quantity-box">
+                            <button>-</button><span>1</span><button>+</button>
+                        </div>
+                        <button class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- ============ END BEVERAGES ============ -->
+
+        <!-- ============ FOOD ============ -->
+        <div class="menu-item-group" data-category="food">
+            <div class="menu-list">
+
+                <div class="menu-card">
+                    <img src="images/avocado-toast.jpg" alt="Avocado Toast">
+                    <div class="menu-content">
+                        <h3>Avocado Toast</h3>
+                        <span class="menu-tag"><i class="fas fa-leaf"></i> Vegan</span>
+                        <p>Whole grain toast with crushed avocado, lemon, and chili</p>
+                    </div>
+                    <div class="menu-action">
+                        <h4>₹280</h4>
+                        <div class="quantity-box">
+                            <button>-</button><span>1</span><button>+</button>
+                        </div>
+                        <button class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-card">
+                    <img src="images/granola-bowl.jpg" alt="Granola Bowl">
+                    <div class="menu-content">
+                        <h3>Granola Bowl</h3>
+                        <span class="menu-tag"><i class="fas fa-seedling"></i> Healthy</span>
+                        <p>Homemade granola with Greek yogurt and seasonal berries</p>
+                    </div>
+                    <div class="menu-action">
+                        <h4>₹250</h4>
+                        <div class="quantity-box">
+                            <button>-</button><span>1</span><button>+</button>
+                        </div>
+                        <button class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-card">
+                    <img src="images/panini.jpg" alt="Panini Sandwich">
+                    <div class="menu-content">
+                        <h3>Panini Sandwich</h3>
+                        <span class="menu-tag"><i class="fas fa-bread-slice"></i> Italian</span>
+                        <p>Grilled Italian sandwich with mozzarella, tomato, and basil</p>
+                    </div>
+                    <div class="menu-action">
+                        <h4>₹320</h4>
+                        <div class="quantity-box">
+                            <button>-</button><span>1</span><button>+</button>
+                        </div>
+                        <button class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                </div>
+                <div class="menu-card">
+                    <img src="images/veg-burger.jpg" alt="Veg Burger">
+                    <div class="menu-content">
+                        <h3>Veg Burger</h3>
+                        <span class="menu-tag"><i class="fas fa-hamburger"></i>Popular</span>
+                        <p> Crispy veggie patty with cheese,lettuce and house sauce.</p>
+                    </div>
+                    <div class="menu-action">
+                        <h4>₹300</h4>
+                        <div class="quantity-box">
+                            <button>-</button><span>1</span><button>+</button>
+                        </div>
+                        <button class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-card">
+                    <img src="images/caesar-salad.jpg" alt="Caesar Salad">
+                    <div class="menu-content">
+                        <h3>Caesar Salad</h3>
+                        <span class="menu-tag"><i class="fas fa-leaf"></i> Fresh</span>
+                        <p>Fresh romaine, parmesan, croutons with house Caesar dressing</p>
+                    </div>
+                    <div class="menu-action">
+                        <h4>₹300</h4>
+                        <div class="quantity-box">
+                            <button>-</button><span>1</span><button>+</button>
+                        </div>
+                        <button class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-card">
+                    <img src="images/pasta-primavera.jpg" alt="Pasta Primavera">
+                    <div class="menu-content">
+                        <h3>Pasta Primavera</h3>
+                        <span class="menu-tag"><i class="fas fa-utensils"></i> Vegan Option</span>
+                        <p>Al dente pasta with fresh seasonal vegetables and light cream</p>
+                    </div>
+                    <div class="menu-action">
+                        <h4>₹350</h4>
+                        <div class="quantity-box">
+                            <button>-</button><span>1</span><button>+</button>
+                        </div>
+                        <button class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-card">
+                    <img src="images/grilled-salmon.jpg" alt="Grilled Salmon">
+                    <div class="menu-content">
+                        <h3>Grilled Salmon</h3>
+                        <span class="menu-tag"><i class="fas fa-fish"></i> Chef's Special</span>
+                        <p>Fresh salmon fillet with lemon butter sauce and vegetables</p>
+                    </div>
+                    <div class="menu-action">
+                        <h4>₹420</h4>
+                        <div class="quantity-box">
+                            <button>-</button><span>1</span><button>+</button>
+                        </div>
+                        <button class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- ============ END FOOD ============ -->
+
+    </div>
+</section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="gallery">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 class="section-title">Our Space</h2>
+                    <p class="section-subtitle">Where exceptional coffee, elegant interiors, and memorable moments come together.
+                        </p>
+                </div>
+
+                <div class="gallery-grid">
+                    <div class="gallery-item" data-aos="zoom-in">
+                        <img src="images/signature-brews.jpg" alt="Signature Brews">
+                    <div class="gallery-overlay">
+                        <h3>Signature Brews</h3>
+                        <p>Crafted with precision</p>
+                    </div>
+                </div>
+                    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
+                        <img src="images/refined-interiors.jpg" alt="Refined Interiors">
+                        <div class="gallery-overlay">
+    <h3>Refined Interiors</h3>
+    <p>Designed for comfort</p>
+</div>
+</div>
+                    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
+                        <img src="images/gourmet-pastries.jpg" alt="Gourmet Pastries">
+                        <div class="gallery-overlay">
+    <h3>Gourmet Pastries</h3>
+    <p>Baked fresh daily</p>
+</div>
+                    </div>
+                    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
+                        <img src="images/master-baristas.jpg" alt="Master Baristas">
+                        <div class="gallery-overlay">
+    <h3>Master Baristas</h3>
+    <p>Experts behind every cup</p>
+</div>
+</div>
+                    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
+                        <img src="images/art-in-every-cup.jpg" alt="Art in Every Cup">
+                        <div class="gallery-overlay">
+    <h3>Art in Every Cup</h3>
+    <p>Beautiful handcrafted creations</p>
+</div>
+                    </div>
+                    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="500">
+                        <img src="images/exclusive-gatherings.jpg" alt="Exclusive Gatherings">
+                        <div class="gallery-overlay">
+    <h3>Exclusive Gatherings</h3>
+    <p>Moments worth celebrating</p>
+</div>
+                    </div>
+                    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="600">
+    <img src="images/coffee-beans.jpg" alt="Coffee Beans">
+    <div class="gallery-overlay">
+        <h3>Premium Beans</h3>
+        <p>Sourced from the world's finest coffee regions</p>
+    </div>
+</div>
+<div class="gallery-item" data-aos="zoom-in" data-aos-delay="700">
+    <img src="images/outdoor-seating.jpg" alt="Outdoor Retreat">
+    <div class="gallery-overlay">
+        <h3>Outdoor Retreat</h3>
+         <p>Unwind in a serene open-air setting</p>
+    </div>
+</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="testimonials">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 class="section-title">Customer Love</h2>
+                    <p class="section-subtitle">What our guests have to say</p>
+                </div>
+
+                <div class="testimonials-carousel" data-aos="fade-up">
+                    <div class="testimonial-track">
+                        <div class="testimonial-card glassmorphism">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial-text">"Best coffee I've ever had! The baristas are incredibly knowledgeable and the atmosphere is perfect for work or catching up with friends."</p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">
+                                    <img src="https://i.pravatar.cc/150?img=1" alt="Sarah">
+                                </div>
+                                <div>
+                                    <h4>Sarah Johnson</h4>
+                                    <p>Regular Customer</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card glassmorphism">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial-text">"I work here almost every day. The WiFi is fast, the coffee is excellent, and the staff always remembers my order. Highly recommended!"</p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">
+                                    <img src="https://i.pravatar.cc/150?img=2" alt="Michael">
+                                </div>
+                                <div>
+                                    <h4>Michael Chen</h4>
+                                    <p>Freelancer</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card glassmorphism">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial-text">"The pastries here are absolutely divine! Fresh every morning and pair perfectly with their signature espresso. My favorite café in the city!"</p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">
+                                    <img src="https://i.pravatar.cc/150?img=3" alt="Emma">
+                                </div>
+                                <div>
+                                    <h4>Emma Wilson</h4>
+                                    <p>Food Blogger</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card glassmorphism">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial-text">"BrewHaven is more than just a café - it's a community. The events they host are amazing and the team is always friendly and welcoming."</p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">
+                                    <img src="https://i.pravatar.cc/150?img=4" alt="David">
+                                </div>
+                                <div>
+                                    <h4>David Kumar</h4>
+                                    <p>Community Organizer</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-btn prev" id="prevBtn">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="carousel-btn next" id="nextBtn">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!-- Pricing/Packages Section -->
+        <section class="pricing">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 class="section-title">Membership Plans</h2>
+                    <p class="section-subtitle">Save more with our loyalty plans</p>
+                </div>
+                <div class="pricing-grid">
+                    <div class="pricing-card" data-aos="fade-up" data-aos-delay="100">
+                        <h3>Starter</h3>
+                        <p class="pricing-price"><span>₹299</span>/month</p>
+                        <p class="pricing-description">Perfect for occasional visitors</p>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> 10% discount on all items</li>
+                            <li><i class="fas fa-check"></i> Free WiFi priority access</li>
+                            <li><i class="fas fa-check"></i> Birthday special offer</li>
+                        </ul>
+                        <button class="btn btn-secondary">Get Started</button>
+                    </div>
+
+                    <div class="pricing-card featured" data-aos="fade-up" data-aos-delay="200">
+                        <div class="popular-badge">Most Popular</div>
+                        <h3>Pro</h3>
+                        <p class="pricing-price"><span>₹699</span>/month</p>
+                        <p class="pricing-description">For our regulars</p>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> 20% discount on all items</li>
+                            <li><i class="fas fa-check"></i> Priority seating</li>
+                            <li><i class="fas fa-check"></i> Free coffee on birthdays</li>
+                            <li><i class="fas fa-check"></i> Exclusive events access</li>
+                        </ul>
+                        <button class="btn btn-primary">Choose Plan</button>
+                    </div>
+
+                    <div class="pricing-card" data-aos="fade-up" data-aos-delay="300">
+                        <h3>Premium</h3>
+                        <p class="pricing-price"><span>₹1299</span>/month</p>
+                        <p class="pricing-description">Ultimate coffee lover</p>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> 30% discount on all items</li>
+                            <li><i class="fas fa-check"></i> Reserved seating</li>
+                            <li><i class="fas fa-check"></i> Free coffee & pastry weekly</li>
+                            <li><i class="fas fa-check"></i> VIP events & tastings</li>
+                            <li><i class="fas fa-check"></i> Personal barista recommendations</li>
+                        </ul>
+                        <button class="btn btn-secondary">Upgrade Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                    <p class="section-subtitle">Got questions? We've got answers</p>
+                </div>
+
+                <div class="faq-grid">
+                    <div class="faq-item" data-aos="fade-up">
+                        <button class="faq-question">
+                            <span>Do you offer vegan options?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes! We offer several vegan options including our Avocado Toast, various nut milks for lattes, and our Pasta Primavera can be made completely vegan.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                        <button class="faq-question">
+                            <span>Can I make group reservations?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Absolutely! We can accommodate groups of up to 20 people. Please contact us in advance to arrange seating and discuss menu options.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                        <button class="faq-question">
+                            <span>What are your operating hours?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>We're open Monday to Friday from 7:00 AM to 9:00 PM, Saturday 8:00 AM to 10:00 PM, and Sunday 9:00 AM to 8:00 PM. Closed on public holidays.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                        <button class="faq-question">
+                            <span>Do you offer online ordering?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes! You can order online through our website or mobile app for pickup. Orders are ready in 15-20 minutes.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+                        <button class="faq-question">
+                            <span>Do you cater for events?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes! We offer catering services for corporate events, meetings, and celebrations. Contact our events team for custom packages.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="500">
+                        <button class="faq-question">
+                            <span>Are your beans organic?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Most of our single-origin beans are sourced from organic, fair-trade certified farms. We're committed to sustainable sourcing practices.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Booking Section -->
+        <section id="booking" class="booking">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 class="section-title">Reserve Your Table</h2>
+                    <p class="section-subtitle">Savor handcrafted coffee, freshly baked pastries, and unforgettable moments in a cozy atmosphere.</p>
+                </div>
+                <form class="booking-form glassmorphism" id="bookingForm" data-aos="fade-up">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" placeholder="Your Phone" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="date" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="time" required>
+                        </div>
+                        <div class="form-group">
+                            <select required>
+                                <option value="">Select Guests</option>
+                                <option value="1">1 Guest</option>
+                                <option value="2">2 Guests</option>
+                                <option value="3">3 Guests</option>
+                                <option value="4">4 Guests</option>
+                                <option value="5">5+ Guests</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Special Requests (Optional)" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-large">Book Table</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+    <div class="container">
+
+        <div class="section-header" data-aos="fade-up">
+            <h2 class="section-title">Connect With Velvet Brew</h2>
+            <p class="section-subtitle">
+                Let us make your next coffee experience unforgettable.
+            </p>
+        </div>
+
+        <div class="contact-grid">
+
+            <!-- LEFT SIDE -->
+            <div class="contact-info" data-aos="fade-right">
+
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div>
+                        <h3>Find Velvet Brew Café</h3>
+                        <p>Jubilee Hills, Hyderabad,<br>Telangana 500033</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div>
+                        <h3>Phone</h3>
+                        <p><a href="tel:+918688891769">+91 8688 891 769</a></p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div>
+                        <h3>Email</h3>
+                        <p><a href="mailto:hello@velvetbrew.com">hello@velvetbrew.com</a></p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div>
+                        <h3>Hours</h3>
+                        <p>Mon - Fri : 8 AM - 9 PM</p>
+                        <p>Saturday : 8 AM - 10 PM</p>
+                        <p>Sunday : 9 AM - 8 PM</p>
+                    </div>
+                </div>
+
+            </div>
+<!-- RIGHT SIDE -->
+            <div class="map-container" data-aos="fade-left">
+                <iframe
+                    src="https://www.google.com/maps?q=Jubilee+Hills+Hyderabad&output=embed"
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+</div>
+        </div>
+    </div>
+</section>
+    </main>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>☕ Velvet Brew Café</h3>
+                    <p>Experience handcrafted specialty coffee, artisan pastries,
+                    and a warm atmosphere where every cup tells a story.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/VelvetBrewCafe" target="_blank">
+    <i class="fab fa-facebook-f"></i>
+</a>
+                        <a href="https://www.instagram.com/velvetbrewcafe" target="_blank">
+    <i class="fab fa-instagram"></i>
+</a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#booking">Reservations</a></li>
+                        <li><a href="#">Catering</a></li>
+                        <li><a href="#">Private Events</a></li>
+                        <li><a href="#">Corporate Packages</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Stay Connected</h4>
+                <p>Subscribe to receive exclusive offers, seasonal specials and café updates.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 Velvet Brew Café. All Rights Reserved.</p>
+            <p>Designed with ❤ for Coffee Lovers.</p>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
